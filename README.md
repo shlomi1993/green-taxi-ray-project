@@ -1,5 +1,10 @@
 # Green Taxi Ray Project - TLC-Backed Per-Zone Recommendations Under Skew
 
+[![Ray](https://img.shields.io/badge/Ray-Distributed_Computing-028CF0?logo=ray&logoColor=white)](https://www.ray.io/)
+[![Docker](https://img.shields.io/badge/Docker-Multi--Node_Cluster-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Conda](https://img.shields.io/badge/Conda-Environment-44A833?logo=anaconda&logoColor=white)](https://docs.conda.io/)
+
 A replay-based recommendation system built on [Ray](https://www.ray.io/). The system processes NYC Green Taxi trip data in 15-minute windows (ticks), producing a per-zone demand recommendation (`NEED` or `OK`) at every tick. A blocking baseline and an asynchronous controller run the same replay side by side, exposing how skew, bounded concurrency, timeout-driven fallback, and idempotent actor writes affect latency and output correctness.
 
 <img width="2816" height="1536" alt="NYC TLC Green Taxi zone illustration" src="https://github.com/user-attachments/assets/1cd8998a-972a-4a33-965c-3cf8778f40dd" />
