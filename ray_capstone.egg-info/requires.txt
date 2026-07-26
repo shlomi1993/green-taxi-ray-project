@@ -1,0 +1,8 @@
+ray
+pandas
+pyarrow
+numpy
+
+[dev]
+pytest
+pytest-xdist

@@ -1,0 +1,50 @@
+[
+  {
+    "zone_id": 41,
+    "n_duplicates": 0,
+    "n_late": 1,
+    "n_fallbacks": 1
+  },
+  {
+    "zone_id": 43,
+    "n_duplicates": 0,
+    "n_late": 2508,
+    "n_fallbacks": 2508
+  },
+  {
+    "zone_id": 74,
+    "n_duplicates": 0,
+    "n_late": 1,
+    "n_fallbacks": 1
+  },
+  {
+    "zone_id": 75,
+    "n_duplicates": 0,
+    "n_late": 1,
+    "n_fallbacks": 1
+  },
+  {
+    "zone_id": 82,
+    "n_duplicates": 0,
+    "n_late": 0,
+    "n_fallbacks": 1
+  },
+  {
+    "zone_id": 95,
+    "n_duplicates": 0,
+    "n_late": 2508,
+    "n_fallbacks": 2509
+  },
+  {
+    "zone_id": 97,
+    "n_duplicates": 0,
+    "n_late": 0,
+    "n_fallbacks": 1
+  },
+  {
+    "zone_id": 166,
+    "n_duplicates": 0,
+    "n_late": 0,
+    "n_fallbacks": 1
+  }
+]
