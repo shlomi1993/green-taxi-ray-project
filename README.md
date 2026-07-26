@@ -1,4 +1,4 @@
-# 🚕 Green Taxi Ray Project - TLC-Backed Per-Zone Recommendations Under Skew
+# Green Taxi Ray Project - TLC-Backed Per-Zone Recommendations Under Skew
 
 A replay-based recommendation system built on [Ray](https://www.ray.io/). The system processes NYC Green Taxi trip data in 15-minute windows (ticks), producing a per-zone demand recommendation (`NEED` or `OK`) at every tick. A blocking baseline and an asynchronous controller run the same replay side by side, exposing how skew, bounded concurrency, timeout-driven fallback, and idempotent actor writes affect latency and output correctness.
 
