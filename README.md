@@ -1,4 +1,4 @@
-# Ray Capstone - TLC-Backed Per-Zone Recommendations Under Skew
+# Green Taxi Ray Project - TLC-Backed Per-Zone Recommendations Under Skew
 
 A replay-based recommendation system built on [Ray](https://www.ray.io/). The system processes NYC Green Taxi trip data in 15-minute windows (ticks), producing a per-zone demand recommendation (`NEED` or `OK`) at every tick. A blocking baseline and an asynchronous controller run the same replay side by side, exposing how skew, bounded concurrency, timeout-driven fallback, and idempotent actor writes affect latency and output correctness.
 
@@ -6,7 +6,7 @@ A replay-based recommendation system built on [Ray](https://www.ray.io/). The sy
 
 ## Table of contents
 
-- [Ray Capstone - TLC-Backed Per-Zone Recommendations Under Skew](#ray-capstone---tlc-backed-per-zone-recommendations-under-skew)
+- [Green Taxi Ray Project - TLC-Backed Per-Zone Recommendations Under Skew](#green-taxi-ray-project---tlc-backed-per-zone-recommendations-under-skew)
   - [Table of contents](#table-of-contents)
   - [Video Walkthrough](#video-walkthrough)
   - [Architecture Overview](#architecture-overview)
@@ -119,7 +119,7 @@ Create and activate the Conda virtual environment:
 
 ```bash
 conda env create -f environment.yml
-conda activate 22971-ray-capstone
+conda activate green-taxi-ray
 ```
 
 
@@ -151,9 +151,9 @@ docker-compose up -d
 ```
 
 This starts:
-- `ray-capstone-head` - Ray head node with dashboard on port 8265
-- `ray-capstone-worker-1` - First worker node
-- `ray-capstone-worker-2` - Second worker node
+- `green-taxi-ray-head` - Ray head node with dashboard on port 8265
+- `green-taxi-ray-worker-1` - First worker node
+- `green-taxi-ray-worker-2` - Second worker node
 
 **Verify the cluster is running:**
 
@@ -180,7 +180,7 @@ All execution steps use `ray job submit` to run on the distributed Docker cluste
 
 **Preliminary:**
 - Ensure the Docker cluster is running (see [Setup §3](#3-docker-cluster-setup))
-- Conda environment activated: `conda activate 22971-ray-capstone`
+- Conda environment activated: `conda activate green-taxi-ray`
 
 **Commands:**
 - `prepare` - Prepare assets for replay execution from raw TLC parquet files
@@ -489,8 +489,8 @@ unalias python
 unalias pip
 
 # Verify they now use the conda environment
-which python  # Should show /path/to/miniconda3/envs/22971-ray-capstone/bin/python
-which pip     # Should show /path/to/miniconda3/envs/22971-ray-capstone/bin/pip
+which python  # Should show /path/to/miniconda3/envs/green-taxi-ray/bin/python
+which pip     # Should show /path/to/miniconda3/envs/green-taxi-ray/bin/pip
 ```
 
 

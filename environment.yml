@@ -1,4 +1,4 @@
-name: 22971-ray-capstone
+name: green-taxi-ray
 channels:
   - conda-forge
   - defaults

@@ -58,9 +58,9 @@ def docker_cluster(compose_cmd: list[str]):
     ps = subprocess.run([*compose_cmd, "ps"], cwd=str(PROJECT_DIR), timeout=120, text=True, capture_output=True)
     assert ps.returncode == 0, "README docker-compose ps example failed"
     text = (ps.stdout or "") + (ps.stderr or "")
-    assert "ray-capstone-head" in text, "docker-compose ps must list ray-capstone-head"
-    assert "ray-capstone-worker-1" in text, "docker-compose ps must list ray-capstone-worker-1"
-    assert "ray-capstone-worker-2" in text, "docker-compose ps must list ray-capstone-worker-2"
+    assert "green-taxi-ray-head" in text, "docker-compose ps must list green-taxi-ray-head"
+    assert "green-taxi-ray-worker-1" in text, "docker-compose ps must list green-taxi-ray-worker-1"
+    assert "green-taxi-ray-worker-2" in text, "docker-compose ps must list green-taxi-ray-worker-2"
     wait_for_ray_dashboard(url=DEFAULT_DOCKER_URL, timeout=180)
 
     yield

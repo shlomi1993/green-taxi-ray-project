@@ -15,10 +15,10 @@ RUN conda env create -f /tmp/environment.yml && conda clean -afy
 
 # Copy project files and install the package in editable mode.
 COPY . /workspace
-RUN conda run -n 22971-ray-capstone pip install --no-cache-dir -e .
+RUN conda run -n green-taxi-ray pip install --no-cache-dir -e .
 
 # Make the conda env the default for all subsequent commands.
-ENV PATH=/opt/conda/envs/22971-ray-capstone/bin:$PATH
+ENV PATH=/opt/conda/envs/green-taxi-ray/bin:$PATH
 ENV PYTHONPATH=/workspace:$PYTHONPATH
 
 # Default command

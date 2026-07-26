@@ -1,11 +1,11 @@
 README.md
 pyproject.toml
-ray_capstone.egg-info/PKG-INFO
-ray_capstone.egg-info/SOURCES.txt
-ray_capstone.egg-info/dependency_links.txt
-ray_capstone.egg-info/entry_points.txt
-ray_capstone.egg-info/requires.txt
-ray_capstone.egg-info/top_level.txt
+green_taxi_ray.egg-info/PKG-INFO
+green_taxi_ray.egg-info/SOURCES.txt
+green_taxi_ray.egg-info/dependency_links.txt
+green_taxi_ray.egg-info/entry_points.txt
+green_taxi_ray.egg-info/requires.txt
+green_taxi_ray.egg-info/top_level.txt
 scripts/__init__.py
 scripts/reset.py
 src/__init__.py

@@ -1,5 +1,5 @@
 """
-Pytest configuration and fixtures for Ray capstone project tests.
+Pytest configuration and fixtures for Green Taxi Ray project tests.
 """
 
 import os
