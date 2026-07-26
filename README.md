@@ -1,14 +1,13 @@
-# Green Taxi Ray Project - TLC-Backed Per-Zone Recommendations Under Skew
+# 🚕 Green Taxi Ray Project - TLC-Backed Per-Zone Recommendations Under Skew
 
 A replay-based recommendation system built on [Ray](https://www.ray.io/). The system processes NYC Green Taxi trip data in 15-minute windows (ticks), producing a per-zone demand recommendation (`NEED` or `OK`) at every tick. A blocking baseline and an asynchronous controller run the same replay side by side, exposing how skew, bounded concurrency, timeout-driven fallback, and idempotent actor writes affect latency and output correctness.
 
 <img width="2816" height="1536" alt="NYC TLC Green Taxi zone illustration" src="https://github.com/user-attachments/assets/1cd8998a-972a-4a33-965c-3cf8778f40dd" />
 
-## Table of contents
+## 📚 Table of contents
 
 - [Green Taxi Ray Project - TLC-Backed Per-Zone Recommendations Under Skew](#green-taxi-ray-project---tlc-backed-per-zone-recommendations-under-skew)
   - [Table of contents](#table-of-contents)
-  - [Video Walkthrough](#video-walkthrough)
   - [Architecture Overview](#architecture-overview)
     - [Workflow](#workflow)
     - [Decision Rule](#decision-rule)
@@ -33,12 +32,7 @@ A replay-based recommendation system built on [Ray](https://www.ray.io/). The sy
   - [Summary](#summary)
 
 
-## Video Walkthrough
-
-[Demo Video](https://drive.google.com/file/d/1poDUbp2wr4XCAV7NgEhq8jXRb2DJdl93/view?usp=sharing)
-
-
-## Architecture Overview
+## 🏗️ Architecture Overview
 
 
 ### Workflow
@@ -66,7 +60,7 @@ The async controller finalizes each tick using:
 Fallback behavior is deterministic (same inputs + seed = same outcomes) and fully visible in artifacts: `actor_counters.json` tracks `n_fallbacks`, `n_late`, `n_duplicates` per zone; `metrics.csv` tracks `n_zones_fallback` per tick.
 
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 main.py                     # The main entry point for the program.
@@ -103,7 +97,7 @@ pytest.ini                  # Pytest configuration
 ```
 
 
-## Setup
+## ⚙️ Setup
 
 
 ### 1. Prerequisites
@@ -174,7 +168,7 @@ docker-compose logs -f ray-head
 ```
 
 
-## Execution
+## 🚀 Execution
 
 All execution steps use `ray job submit` to run on the distributed Docker cluster. This ensures the demo simulates real-world distributed deployment where actors and tasks are spread across multiple nodes.
 
@@ -402,7 +396,7 @@ python scripts/reset.py  # Or simply "reset" if venv is activated
 ```
 
 
-## Tests
+## 🧪 Tests
 
 
 ### Pytest
@@ -471,7 +465,7 @@ The script runs on a Docker cluster by default, executing these steps:
 **Important Note:** Docker mode requires a container restart after prepare because macOS Docker Desktop doesn't immediately propagate new directories to running containers. This is handled automatically by the script.
 
 
-## Troubleshooting
+## 🛠️ Troubleshooting
 
 **Issue: `python` or `pip` commands use system Python instead of conda environment**
 
@@ -494,7 +488,7 @@ which pip     # Should show /path/to/miniconda3/envs/green-taxi-ray/bin/pip
 ```
 
 
-## Summary
+## ✨ Summary
 
 This project demonstrates distributed systems behavior on a **multi-node Ray cluster** deployed via Docker. All three execution modes - blocking, async, and stress - run on a three-node cluster with one head and two workers, where actors and tasks are distributed across containers, exposing real-world challenges like network latency, skew, and fault tolerance.
 
