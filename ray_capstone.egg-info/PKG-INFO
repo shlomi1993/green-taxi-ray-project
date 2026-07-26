@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: ray-capstone
+Version: 0.1.0
+Summary: Ray distributed computing capstone project for TLC demand replay
+Requires-Python: >=3.10
+Requires-Dist: ray
+Requires-Dist: pandas
+Requires-Dist: pyarrow
+Requires-Dist: numpy
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-xdist; extra == "dev"

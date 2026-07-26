@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ray-capstone"
+version = "0.1.0"
+description = "Ray distributed computing capstone project for TLC demand replay"
+requires-python = ">=3.10"
+dependencies = [
+    "ray",
+    "pandas",
+    "pyarrow",
+    "numpy",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-xdist",
+]
+
+[tool.setuptools.packages.find]
+include = ["src*", "scripts*"]
+
+[project.scripts]
+prepare = "src.prepare:main"
+run = "src.run:main"
+reset = "scripts.reset:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
