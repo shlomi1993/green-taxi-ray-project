@@ -1,4 +1,0 @@
-[console_scripts]
-prepare = src.prepare:main
-reset = scripts.reset:main
-run = src.run:main
