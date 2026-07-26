@@ -1,7 +1,7 @@
-# Ray Unit 4 - Capstone Project Design Doc.
+# Green Taxi Ray Project Design Document
 ## TLC-backed per-zone recommendations under skew.
 
-This document specifies the Ray capstone project.
+This document specifies the Green Taxi Ray project.
 
 ---
 
@@ -16,7 +16,7 @@ This is a toy dispatcher-style, human-facing support tool. The system watches de
 
 To make that concrete, the project uses historical taxi data as a replay. The system walks through the data in small fixed time windows and, for each zone, decides whether demand looks elevated or normal.
 
-This capstone is mainly about distributed-systems behavior, not forecasting sophistication. The interesting part is what happens when some zones take longer than others, some work finishes late, or the same write is retried. You should show a clear runtime architecture with actor-owned state, scoring tasks, and deterministic rules for when a time window is considered finished even when some zones are slow.
+This project is mainly about distributed-systems behavior, not forecasting sophistication. The interesting part is what happens when some zones take longer than others, some work finishes late, or the same write is retried. You should show a clear runtime architecture with actor-owned state, scoring tasks, and deterministic rules for when a time window is considered finished even when some zones are slow.
 
 Fault tolerance is also a required goal. The runtime should treat retries, duplicate delivery, and late results as normal possibilities, and any state mutation that matters for the replay should be written idempotently.
 
@@ -65,7 +65,7 @@ At each `tick`, each active zone in that selected subset should produce one reco
 - `NEED`: this zone looks busier than its recent norm.
 - `OK`: this zone does not look elevated right now.
 
-The recommendation rule should stay intentionally simple. This capstone is not about forecasting sophistication. You may use a lightweight rule based on recent observed demand, a zone baseline, or another equally simple thresholded signal derived from the reference data.
+The recommendation rule should stay intentionally simple. This project is not about forecasting sophistication. You may use a lightweight rule based on recent observed demand, a zone baseline, or another equally simple thresholded signal derived from the reference data.
 
 ---
 

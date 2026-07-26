@@ -126,7 +126,7 @@ REPLAY_FILE="$DATA_DIR/green_tripdata_2023-02.parquet"
 # --- Start of demo ---
 echo ""
 echo -e "${CYAN}===================${NC}"
-echo -e "${CYAN}Ray Capstone - Demo${NC}"
+echo -e "${CYAN}Green Taxi Ray Project - Demo${NC}"
 echo -e "${CYAN}===================${NC}"
 echo "Started: $(date)"
 if [ "$USE_DOCKER" = true ]; then

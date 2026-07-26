@@ -1,5 +1,5 @@
 """
-Helper functions for Ray capstone project tests.
+Helper functions for Green Taxi Ray project tests.
 
 This module contains utility functions for generating synthetic test data and running subprocess commands.
 """

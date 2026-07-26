@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: ray-capstone-head
+    container_name: green-taxi-ray-head
     command: >
       bash -c "ray start --head 
       --port=6379 
@@ -33,7 +33,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: ray-capstone-worker-1
+    container_name: green-taxi-ray-worker-1
     command: >
       bash -c "ray start 
       --address=ray-head:6379 
@@ -58,7 +58,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: ray-capstone-worker-2
+    container_name: green-taxi-ray-worker-2
     command: >
       bash -c "ray start 
       --address=ray-head:6379 
